@@ -1,0 +1,272 @@
+/* Base Navigation Styles */
+#nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+/* Container Styles */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    width: 100%;
+    height: 80px;
+}
+
+/* Logo Styles */
+#nav .logo {
+    font-size: 2em;
+    font-family: "TT_regular";
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Navigation Right Side Styles */
+.nav-right {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+/* Menu Styles */
+#nav ul.menu {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    align-items: center;
+}
+
+#nav ul.menu li {
+    margin-left: 2rem;
+}
+
+#nav ul.menu li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 1.3em;
+    border: none; /* Remove any border */
+}
+
+/* Menu Toggle (Hamburger) Styles */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 36px;
+    height: 27px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+#nav.scrolled .menu-toggle span {
+    background-color: #000;
+}
+
+/* Scrolled State Styles */
+#nav.scrolled {
+    background-color: #FAF8F6;
+}
+
+#nav.scrolled ul.menu li a,
+#nav.scrolled .logo {
+    color: #000;
+}
+
+/* Hover Effects */
+#nav ul.menu li a:hover, #nav .logo:hover {
+    color: #000;
+}
+
+/* Full Screen Menu Styles */
+.full-screen-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 1001;
+    overflow-y: auto;
+}
+
+.full-screen-menu.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.full-screen-menu ul {
+    list-style-type: none;
+    padding: 0;
+    width: 80%;
+    max-width: 300px;
+}
+
+.full-screen-menu ul li {
+    margin: 30px 0;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+}
+
+.full-screen-menu ul li a {
+    color: black;
+    font-size: 24px;
+    text-decoration: none;
+    font-family: 'TT_regular', sans-serif;
+}
+
+.full-screen-menu ul li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.close-button::before,
+.close-button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    top: 50%;
+    left: 0;
+}
+
+.close-button::before {
+    transform: rotate(45deg);
+}
+
+.close-button::after {
+    transform: rotate(-45deg);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+    .nav-container {
+        padding: 0 1rem;
+    }
+
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+    }
+
+    #nav ul.menu {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        padding: 1rem 0;
+        background-color: transparent; /* Remove blue background */
+    }
+
+    #nav ul.menu.active {
+        display: flex;
+    }
+
+    #nav ul.menu li {
+        margin: 0.75rem 0;
+        text-align: center;
+    }
+
+    #nav ul.menu li a {
+        color: #fff;
+        display: block;
+        padding: 0.5rem 0;
+    }
+
+    .nav-right {
+        justify-content: flex-end;
+    }
+}
+
+@media screen and (max-width: 736px) {
+
+    .nav-container {
+        height: 60px;
+    }
+
+    #nav .logo {
+        font-size: 1.2em;
+    }
+
+    .menu-toggle {
+        width: 30px;
+        height: 21px;
+        margin-left: 1rem;
+    }
+
+    .menu-toggle span {
+        height: 3px;
+    }
+
+    #nav ul.menu {
+        top: 60px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #nav .logo {
+        font-size: 1.6em;
+    }
+
+    #nav ul.menu li a {
+        font-size: 1.2em;
+    }
+}
+
+/* Remove borders from list items and their children */
+#nav ul.menu,
+#nav ul.menu li,
+#nav ul.menu li a {
+    border: none;
+    border-right: none;
+    border-left: none;
+}
+
+/* Ensure no padding or margins are creating the appearance of borders */
+#nav ul.menu li {
+    padding: 0;
+    margin: 0;
+}
+
+/* Adjust spacing between menu items if needed */
+#nav ul.menu li:not(:last-child) {
+    margin-right: 2rem; /* Adjust this value as needed */
+}

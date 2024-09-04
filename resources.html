@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Services - 1SQM</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style> 
+        .services-section {
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+            background-color: #f9f9f9;
+            margin: 0;
+        }
+
+        .service-box {
+            position: relative;
+            flex: 1;
+            background: white;
+            text-align: center;
+            margin: 5px;
+            padding: 0;
+            overflow: hidden;
+            width: 300px;
+            height: 300px; /* Set a fixed height and width for uniform size */
+        }
+
+        .service-box a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            color: inherit;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .service-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: opacity 0.3s, filter 0.3s;
+        }
+
+        .service-box h3 {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            margin: 0;
+            color: white;
+            font-size: 1.5em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            transition: bottom 0.3s;
+        }
+
+        .service-box p {
+            position: absolute;
+            bottom: 10%;
+            width: 100%;
+            margin: 0;
+            color: white;
+            font-size: 1em;
+            opacity: 0;
+            transition: opacity 0.3s;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .service-box:hover h3 {
+            bottom: 45%;
+        }
+
+        .service-box:hover p {
+            opacity: 1;
+        }
+
+        .service-box:hover img {
+            filter: brightness(50%);
+        }
+
+        .button-section {
+            text-align: center;
+            padding: 20px 0;
+            background-color: white;
+        }
+
+        .button-section .button {
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button-section .button:hover {
+            background-color: white;
+            color: black;
+        }
+
+        #header .inner header h1 {
+            letter-spacing: -2px !important; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body class="is-preload">
+    <div class="full-screen-menu">
+        <div class="close-button"></div>
+        <ul>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
+    </div>
+    <div id="page-wrapper">
+        <!-- Header -->
+        <div id="header">
+
+            <!-- Nav -->
+            <nav id="nav" class="custom-font2">
+                <div class="nav-container">
+                    <a href="index.html" class="logo">One Square Metre</a>
+                    <div class="nav-right">
+                        <div class="menu-toggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <ul class="menu">
+                            <li><a href="about.html">About us</a></li>
+                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="resources.html">Resources</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="contact.html">Contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <section id="banner" style="background-color: #FAF8F6;">
+            <header>
+                <h2>Our <strong>Resources</strong></h2>
+                <p>Not an expert? Leave it to us, we've got you covered.</p>
+            </header>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services-section" style="background-color: #FAF8F6;">
+            <div class="service-box" style="background-color: #FAF8F6;">
+                <a href="installation.html">
+                    <img src="images/installation_service.jpg" alt="Installation">
+                    <h3>Installation</h3>
+                    <p>Explore our detailed installation guides tailored for every scenario. <br><b style="color: white;">Click for more info.</b></p>
+                </a>
+            </div>
+            <div class="service-box">
+                <a href="maintenance.html">
+                    <img src="images/maintenance_service.jpeg" alt="Maintenance & Care">
+                    <h3>Maintenance & Care</h3>
+                    <p>Discover expert tips and guides to maintain your floors and keep them looking better for longer. <br><b style="color: white;">Click for more info.</b></p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Button Section -->
+        <div class="button-section" style="background-color: #FAF8F6;">
+            <p style="text-align: center;">Still need help? Get in touch with us, we will be happy to help.</p>
+            <div class="custom-button-wrapper">
+                <a href="contact.html" class="custom-grow-button">Contact us</a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div id="footer">
+            <div>
+                <a href="index.html" class="custom-font" ><img src="images/1SQM_logo_white.png"></a>
+            </div>
+            <div>
+                <ul class="copyright">
+                    <li class="custom-font2">&copy; One Square Metre. All rights reserved.</li>
+                </ul>
+            </div>
+            <div>
+                <p class="custom-font2">
+                    Level 16, 1 Collins St, VIC 3000<br>
+                    +61 396 541 810<br>
+                    info@jpcgroup.com
+                </p>
+            </div>
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.dropotron.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/navbar.js"></script>
+
+    </div>
+</body>
+</html>

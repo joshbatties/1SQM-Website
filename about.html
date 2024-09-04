@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>About - 1SQM</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/navbar.css" /> <!-- Added navbar CSS -->
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        #main .container p {
+            text-align: center;
+        }
+
+        @keyframes pullUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #animated-text {
+            font-family: sans-serif;
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            line-height: 1.5;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .word {
+            display: inline-block;
+            padding-right: 8px;
+            opacity: 0;
+            animation: pullUp 0.5s forwards;
+            animation-play-state: paused;
+        }
+
+        .no-bullets {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .no-bullets li {
+            margin: 0 0 10px 0;
+        }
+
+        #acknowledgement p {
+            text-align: center;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        strong.fade-in-list {
+            display: inline-block;
+            transform: translateX(-50px);
+            transition: transform 0.5s ease-out;
+            will-change: transform;
+            opacity: 0;
+        }
+
+        strong.fade-in-list.visible {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .hidden-text {
+            opacity: 0;
+            transition: opacity 0.5s ease-out;
+        }
+
+        .hidden-text.visible {
+            opacity: 1;
+        }
+
+        #header .inner header h1 {
+            letter-spacing: -2px !important; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body class="is-preload">
+    <div class="full-screen-menu">
+        <div class="close-button"></div>
+        <ul>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
+    </div>
+    <div id="page-wrapper">
+        <!-- Header -->
+        <div id="header">
+            <!-- Nav -->
+            <nav id="nav" class="custom-font2">
+                <div class="nav-container">
+                    <a href="index.html" class="logo">One Square Metre</a>
+                    <div class="nav-right">
+                        <div class="menu-toggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <ul class="menu">
+                            <li><a href="about.html">About us</a></li>
+                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="resources.html">Resources</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="contact.html">Contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Main -->
+        <div id="main" class="wrapper style1" style="background-color: #FAF8F6;">
+            <div class="container" style="background-color: #FAF8F6;">
+                <section>
+                    <h3 id="animated-text">Why Choose Us?</h3>
+                    <ul class="no-bullets">
+                        <li>
+                            <strong class="fade-in-list">Expert Craftsmanship:</strong>
+                            <span class="hidden-text">Our skilled artisans craft each piece with precision and care, ensuring exceptional quality.</span>
+                        </li>
+                        <li>
+                            <strong class="fade-in-list">Sustainable Materials:</strong>
+                            <span class="hidden-text">By choosing us you are making a choice for a greener, healthier planet.</span>
+                        </li>
+                        <li>
+                            <strong class="fade-in-list">Customer-Centric Approach:</strong>
+                            <span class="hidden-text">We put you first by delivering personalized and attentive service tailored to your unique needs.</span>
+                        </li>
+                        <li>
+                            <strong class="fade-in-list">Comprehensive Services:</strong>
+                            <span class="hidden-text">From installation to maintenance, we offer a full range of services to meet your needs.</span>
+                        </li>
+                    </ul>
+                    <h3>Our Mission</h3>
+                    <p>Founded with a passion for <strong class="fade-in">beautiful, high-quality timber flooring,</strong> we have grown to become a trusted name in the industry. Our journey began with a simple mission: to provide homeowners and businesses with exquisite flooring solutions that are not only <strong class="fade-in">aesthetically pleasing</strong> but also <strong class="fade-in">sustainable</strong> and <strong class="fade-in">ethically sourced.</strong></p>
+                    <h3>Our Values</h3>
+                    <p>Integrity and transparency are at the heart of our operations. We believe in <strong class="fade-in">fair trade</strong> and work closely with our suppliers to ensure that all our timber is <strong class="fade-in">responsibly sourced.</strong> Our commitment to ethical business practices extends to every aspect of our work, from procurement to delivery. Your satisfaction is our top priority. We pride ourselves on delivering a <strong class="fade-in">seamless and enjoyable customer experience,</strong> from your initial consultation to the final installation. Our team of experts is dedicated to providing <strong class="fade-in">personalized service,</strong> ensuring that your flooring project is completed to the <strong class="fade-in">highest standards.</strong></p>
+                </section>
+            </div>
+        </div>
+        <section id="acknowledgement">
+            <p>In the spirit of reconciliation, One Square Metre acknowledges the Traditional Custodians of Country throughout Australia and their connections to land, sea and community. <br>We pay our respect to their Elders past and present and extend that respect to all Aboriginal and Torres Strait Islander peoples today</p>
+        </section>
+        <!-- Footer -->
+        <div id="footer">
+            <div>
+                <a href="index.html" class="custom-font" ><img src="images/1SQM_logo_white.png"></a>
+            </div>
+            <div>
+                <ul class="copyright">
+                    <li class="custom-font2">&copy; One Square Metre. All rights reserved.</li>
+                </ul>
+            </div>
+            <div>
+                <p class="custom-font2">
+                    Level 16, 1 Collins St, VIC 3000<br>
+                    +61 396 541 810<br>
+                    info@jpcgroup.com
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const textElement = document.getElementById('animated-text');
+            const text = textElement.innerText;
+            const words = text.split(' ');
+
+            textElement.innerHTML = '';
+
+            words.forEach((word, index) => {
+                const span = document.createElement('span');
+                span.className = 'word';
+                span.style.animationDelay = `${index * 0.2}s`;
+                span.textContent = word === '' ? '\u00A0' : word;
+                textElement.appendChild(span);
+            });
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.querySelectorAll('.word').forEach(word => {
+                            word.style.animationPlayState = 'running';
+                        });
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            observer.observe(textElement);
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const listItems = document.querySelectorAll('.no-bullets li');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        observer.unobserve(entry.target);
+                        
+                        listItems.forEach((item, index) => {
+                            const strongElement = item.querySelector('strong.fade-in-list');
+                            const hiddenText = item.querySelector('.hidden-text');
+                            
+                            setTimeout(() => {
+                                strongElement.classList.add('visible');
+                                
+                                // Show hidden text after strong text finishes sliding in
+                                setTimeout(() => {
+                                    hiddenText.classList.add('visible');
+                                }, 500); // 500ms is the duration of the slide-in animation
+                            }, 1000 + (index * 500)); // 1000ms initial delay, then 500ms between each item
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            // Observe the parent ul element
+            const parent = listItems[0].closest('ul');
+            observer.observe(parent);
+        });
+    </script>
+    <script src="assets/js/navbar.js"></script>
+</body>
+</html>

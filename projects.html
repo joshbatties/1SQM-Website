@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Projects - 1SQM</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/navbar.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <style>
+            .image-collage {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin: 20px 0;
+            }
+
+            .image-collage img {
+                flex: 1 1 calc(33.333% - 10px);
+                max-width: calc(33.333% - 10px);
+                height: auto;
+                margin: 5px;
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 3s ease, transform 3s ease;
+                object-fit: contain;
+            }
+
+            .image-collage img.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            #banner p {
+                text-align: center;
+            }
+
+            #header .inner header h1 {
+                letter-spacing: -2px !important; 
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            }
+        </style>
+    </head>
+    <body class="is-preload">
+        <div class="full-screen-menu">
+            <div class="close-button"></div>
+            <ul>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+        </div>
+        <div id="page-wrapper">
+            <!-- Header -->
+            <div id="header">
+                <!-- Nav -->
+                <nav id="nav" class="custom-font2">
+                    <div class="nav-container">
+                        <a href="index.html" class="logo">One Square Metre</a>
+                        <div class="nav-right">
+                            <div class="menu-toggle">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <ul class="menu">
+                                <li><a href="about.html">About us</a></li>
+                                <li><a href="shop.html">Shop</a></li>
+                                <li><a href="resources.html">Resources</a></li>
+                                <li><a href="projects.html">Projects</a></li>
+                                <li><a href="contact.html">Contact us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <section id="banner" style="background-color: #FAF8F6;">
+                <p>Looking for inspiration?</p>
+                <header>
+                    <h2>Browse some of our <strong>recent</strong> projects.</h2>
+                </header>
+            </section>
+
+            <!-- Image Collage Section -->
+            <div class="image-collage" id="image-collage">
+                <img src="images/timber8.jpg" alt="Image 1">
+                <img src="images/timber3.webp" alt="Image 1">
+                <img src="images/timber5.jpg" alt="Image 1">
+                <img src="images/timber6.jpg" alt="Image 1">
+                <img src="images/timber7.jpg" alt="Image 1">
+                <img src="images/flooring1.jpg" alt="Image 1">
+                <img src="images/timber9.jpg" alt="Image 1">
+                <img src="images/timber11.jpg" alt="Image 1">
+                <img src="images/timber12.jpg" alt="Image 1">
+                <img src="images/timber13.jpg" alt="Image 1">
+                <img src="images/timber16.webp" alt="Image 1">
+                <img src="images/timber15.webp" alt="Image 1">
+                <img src="images/timber14.jpg" alt="Image 1">
+                <img src="images/timber17.jpg" alt="Image 1">
+                <img src="images/timber18.jpg" alt="Image 1">
+                <img src="images/timber19.jpg" alt="Image 1">
+                <img src="images/timber20.jpg" alt="Image 1">
+                <img src="images/timber4.jpg" alt="Image 1">
+            </div>
+
+            <!-- Footer -->
+            <div id="footer">
+                <div>
+                    <a href="index.html" class="custom-font" ><img src="images/1SQM_logo_white.png"></a>
+                </div>
+                <div>
+                    <ul class="copyright">
+                        <li class="custom-font2">&copy; One Square Metre. All rights reserved.</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="custom-font2">
+                        Level 16, 1 Collins St, VIC 3000<br>
+                        +61 396 541 810<br>
+                        info@jpcgroup.com
+                    </p>
+                </div>
+            </div>
+
+            <!-- Scripts -->
+            <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/jquery.dropotron.min.js"></script>
+            <script src="assets/js/jquery.scrolly.min.js"></script>
+            <script src="assets/js/jquery.scrollex.min.js"></script>
+            <script src="assets/js/browser.min.js"></script>
+            <script src="assets/js/breakpoints.min.js"></script>
+            <script src="assets/js/util.js"></script>
+            <script src="assets/js/main.js"></script>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var images = document.querySelectorAll('.image-collage img');
+                    var options = {
+                        root: null,
+                        rootMargin: '0px',
+                        threshold: 0.1
+                    };
+
+                    function handleIntersection(entries, observer) {
+                        entries.forEach(function (entry) {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('visible');
+                            }
+                        });
+                    }
+
+                    var observer = new IntersectionObserver(handleIntersection, options);
+
+                    images.forEach(function (image, index) {
+                        observer.observe(image);
+                        image.style.transitionDelay = (index % 3) * 0.5 + 's';
+                    });
+                });
+            </script>
+            <script src="assets/js/navbar.js"></script>
+        </div>
+    </body>
+</html>
