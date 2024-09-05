@@ -5,10 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/navbar.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <style>
         #header {
             position: relative; /* Ensures the gradient positions correctly */
+            background-image: url('images/home_flooring.jpg');
         }
 
         #header #nav {
@@ -337,7 +339,6 @@
             background-color: white;
             color: #233642;
             padding: 40px 20px;
-            font-family: 'LibreBodoni', sans-serif;
         }
 
         #why-choose-banner h2 {
@@ -426,6 +427,16 @@
     </script>
 </head>
 <body class="homepage is-preload">
+    <div class="full-screen-menu">
+        <div class="close-button"></div>
+        <ul>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
+    </div>
     <div id="page-wrapper">
         <!-- Header -->
         <div id="header">
@@ -440,16 +451,24 @@
             <div class="gradient"></div>
             <!-- Nav -->
             <nav id="nav" class="custom-font2">
-                <div class="logo">
-                    <a href="index.html"><img src="images/1SQM_logo_white.png"></a>
+                <div class="nav-container">
+                    <a href="index.html" class="logo">1SQM Logo</a>
+                    <div class="nav-right">
+                        <div class="menu-toggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <ul class="menu">
+                            <li><a href="index2.html">SECOND HOME</a></li>
+                            <li><a href="about.html">About us</a></li>
+                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="resources.html">Resources</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="contact.html">Contact us</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <ul class="menu">
-                    <li><a href="about.html">About us</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact us</a></li>
-                </ul>
             </nav>
         </div>
 
@@ -504,30 +523,30 @@
                         <div class="infographic-item">
                             <div class="item-header">
                                 <i class="fas fa-cut"></i>
-                                <h3>Cut out the middleman</h3>
+                                <h3>Direct to Consumer</h3>
                             </div>
-                            <p class="description">Direct from the mill to your doorstep, ensuring the best prices.</p>
+                            <p class="description">Direct from the mill to your doorstep, no middleman, ensuring the best prices.</p>
                         </div>
                         <div class="infographic-item">
                             <div class="item-header">
                                 <i class="fas fa-leaf"></i>
-                                <h3>Eco-friendly timber</h3>
+                                <h3>FSC Certified</h3>
                             </div>
                             <p class="description">Our timber is sustainably sourced, supporting responsible forestry practices.</p>
                         </div>
                         <div class="infographic-item">
                             <div class="item-header">
                                 <i class="fas fa-tag"></i>
-                                <h3>Price Match Guarantee</h3>
+                                <h3>Great Prices</h3>
                             </div>
-                            <p class="description">We offer a price match guarantee to ensure you get the best deal on your timber flooring.</p>
+                            <p class="description">You won't find a better price</p>
                         </div>
                         <div class="infographic-item">
                             <div class="item-header">
                                 <i class="fas fa-th"></i>
-                                <h3>Wide Selection</h3>
+                                <h3>Ready to install</h3>
                             </div>
-                            <p class="description">Choose from a vast array of timber species, finishes, and grades to suit any style and budget.</p>
+                            <p class="description">All our timber flooring comes pre-finished so its ready for you to install.</p>
                         </div>
                     </div>
                 </section>
@@ -679,6 +698,7 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
     <scipt src="assets/js/buttons.js"></scipt>
+    <script src="assets/js/navbar.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var paragraphs = document.querySelectorAll('#banner p');
