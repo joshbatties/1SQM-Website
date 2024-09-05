@@ -15,8 +15,11 @@
             font-style: normal;
         }
 
-        #main .container p {
-            text-align: center;
+        #main h3, #main p {
+    text-align: left;
+}
+        #main .container {
+            max-width: 1000px;
         }
 
         @keyframes pullUp {
@@ -32,13 +35,13 @@
 
         #animated-text {
             font-family: sans-serif;
-            text-align: center;
             font-size: 2em;
             font-weight: bold;
             line-height: 1.5;
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: flex-start;
+            text-align: left;
         }
 
         .word {
@@ -52,10 +55,12 @@
         .no-bullets {
             list-style-type: none;
             padding: 0;
+            text-align: left;
         }
 
         .no-bullets li {
             margin: 0 0 10px 0;
+            text-align: left;
         }
 
         #acknowledgement p {
@@ -89,6 +94,11 @@
         #header .inner header h1 {
             letter-spacing: -2px !important; 
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        #main {
+            padding-top: 2em; /* Reduced from the default value */
+            text-align: left;
         }
     </style>
 </head>
@@ -162,11 +172,7 @@
                         </li>
                         <li>
                             <strong class="fade-in-list">Customer-Centric Approach:</strong>
-                            <span class="hidden-text">We put you first by delivering personalized and attentive service tailored to your unique needs.</span>
-                        </li>
-                        <li>
-                            <strong class="fade-in-list">Comprehensive Services:</strong>
-                            <span class="hidden-text">From installation to maintenance, we offer a full range of services to meet your needs.</span>
+                            <span class="hidden-text">We put you first by delivering personalized and attentive service tailored to your needs.</span>
                         </li>
                     </ul>
                     <h3>Our Mission</h3>
