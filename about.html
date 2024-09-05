@@ -100,6 +100,57 @@
             padding-top: 2em; /* Reduced from the default value */
             text-align: left;
         }
+
+        .image-container {
+            width: 100%;
+            margin: 2em 0;
+            overflow: hidden;
+        }
+        
+        .image-right, .image-left {
+            width: 500px;
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .image-right {
+            float: right;
+            margin-left: 2em;
+        }
+        
+        .image-left {
+            float: left;
+            margin-right: 2em;
+        }
+        
+        .text-left {
+            float: left;
+            width: calc(100% - 500px - 2em); /* Adjust width to fit beside the image */
+        }
+        
+        .text-right {
+            float: right;
+            width: calc(100% - 500px - 2em); /* Adjust width to fit beside the image */
+        }
+        
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* Add responsive adjustments */
+        @media screen and (max-width: 1200px) {
+            .image-right, .image-left {
+                width: 100%;
+                float: none;
+                margin: 1em 0;
+            }
+            .text-left, .text-right {
+                width: 100%;
+                float: none;
+            }
+        }
     </style>
 </head>
 <body class="is-preload">
@@ -175,11 +226,22 @@
                             <span class="hidden-text">We put you first by delivering personalized and attentive service tailored to your needs.</span>
                         </li>
                     </ul>
-                    <h3>Our Mission</h3>
-                    <p>Founded with a passion for <strong class="fade-in">beautiful, high-quality timber flooring,</strong> we have grown to become a trusted name in the industry. Our journey began with a simple mission: to provide homeowners and businesses with exquisite flooring solutions that are not only <strong class="fade-in">aesthetically pleasing</strong> but also <strong class="fade-in">sustainable</strong> and <strong class="fade-in">ethically sourced.</strong></p>
-                    <h3>Our Values</h3>
-                    <p>Integrity and transparency are at the heart of our operations. We believe in <strong class="fade-in">fair trade</strong> and work closely with our suppliers to ensure that all our timber is <strong class="fade-in">responsibly sourced.</strong> Our commitment to ethical business practices extends to every aspect of our work, from procurement to delivery. Your satisfaction is our top priority. We pride ourselves on delivering a <strong class="fade-in">seamless and enjoyable customer experience,</strong> from your initial consultation to the final installation. Our team of experts is dedicated to providing <strong class="fade-in">personalized service,</strong> ensuring that your flooring project is completed to the <strong class="fade-in">highest standards.</strong></p>
-                </section>
+                    <div class="image-container clearfix">
+                        <img src="images/about1.jpg" alt="About 1" class="image-right">
+                        <div class="text-left">
+                            <h3>Our Mission</h3>
+                            <p>Founded with a passion for <strong class="fade-in">beautiful, high-quality timber flooring,</strong> we have grown to become a trusted name in the industry. Our journey began with a simple mission: to provide homeowners and businesses with exquisite flooring solutions that are not only <strong class="fade-in">aesthetically pleasing</strong> but also <strong class="fade-in">sustainable</strong> and <strong class="fade-in">ethically sourced.</strong> Over the years, we have expanded our product range and refined our techniques, ensuring that every floor we install is a perfect blend of <strong>craftsmanship, durability, and style.</strong> We believe that great flooring should not only enhance the look of a space but also contribute to a healthier and more eco-friendly environment. Our commitment to <strong>quality, innovation, and customer satisfaction</strong> continues to drive us forward, as we remain dedicated to transforming spaces into beautiful, functional works of art. Let us help you find the perfect flooring solution for your next project and experience the difference that comes with a true passion for <strong>excellence.</strong></p></p>
+                        </div>
+                    </div>
+                
+                    <div class="image-container clearfix">
+                        <img src="images/about2.jpg" alt="About 2" class="image-left">
+                        <div class="text-right">
+                            <h3>Our Values</h3>
+                            <p>Integrity and transparency are at the heart of our operations. We believe in <strong class="fade-in">fair trade</strong> and work closely with our suppliers to ensure that all our timber is <strong class="fade-in">responsibly sourced.</strong> Our commitment to ethical business practices extends to every aspect of our work, from procurement to delivery. Your satisfaction is our top priority. We pride ourselves on delivering a <strong class="fade-in">seamless and enjoyable customer experience,</strong> from your initial consultation to the final installation. Our team of experts is dedicated to providing <strong class="fade-in">personalized service,</strong> ensuring that your flooring project is completed to the <strong class="fade-in">highest standards.</strong> Whether you're renovating a small room or transforming an entire commercial space, we are here to guide you <strong>every step of the way</strong>. By choosing us, you're not just getting premium timber flooring—you're investing in a partnership built on trust, quality, and a shared commitment to sustainability and craftsmanship. Let us help you create a space that reflects your style and values, with flooring that <strong>stands the test of time.</strong></p>
+                        </div>
+                    </div>
+                    </section>
             </div>
         </div>
         <section id="acknowledgement">
